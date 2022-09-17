@@ -1,6 +1,8 @@
-import { Container } from '@/components/Container/Container'
-import { NextPage } from 'next'
 import Head from 'next/head'
+import { NextPage } from 'next'
+
+import { Container } from '@/components/Container/Container'
+import { Hero } from '@/components/Hero/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +11,9 @@ const Home: NextPage = () => {
         <title>Clodoaldo Dantas</title>
       </Head>
 
-      <Container>Home Page</Container>
+      <Container>
+        <Hero />
+      </Container>
     </>
   )
 }
