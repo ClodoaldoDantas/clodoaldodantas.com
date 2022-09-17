@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styles from './Hero.module.scss'
-
-const email = 'clodoaldodantas8@gmail.com'
+import { contact } from 'data/contact'
 
 export function Hero() {
   return (
@@ -23,8 +22,8 @@ export function Hero() {
           de código ☕.
         </p>
 
-        <a href={`mailto:${email}`} className={styles.email}>
-          👉 {email}
+        <a href={`mailto:${contact.email}`} className={styles.email}>
+          👉 {contact.email}
         </a>
       </div>
     </section>

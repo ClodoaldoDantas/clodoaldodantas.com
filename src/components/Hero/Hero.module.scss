@@ -28,5 +28,7 @@
 }
 
 .email {
+  display: inline-block;
   color: var(--mainTextColor);
+  margin-bottom: 1rem;
 }
