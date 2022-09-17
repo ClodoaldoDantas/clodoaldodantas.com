@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainTextColor: #fff;
+  --secondaryTextColor: #adb0b1;
+  --mainLinkColor: rgb(30, 190, 214);
+  --mainBorderColor: #2b3031;
+  --mainBgColor: #131415;
+}
+
+body {
+  font-family: 'Readex Pro', sans-serif;
+  line-height: 1.5rem;
+  background-color: var(--mainBgColor);
+  color: var(--mainTextColor);
+}
+
+p,
+span,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+}
+
+li {
+  line-height: 1.9rem;
+}
