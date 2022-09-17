@@ -1,5 +1,5 @@
 import styles from './Qualifications.module.scss'
-import { qualifications } from 'data/qualifications'
+import { qualifications } from '@/data/qualifications'
 
 export function Qualifications() {
   return (

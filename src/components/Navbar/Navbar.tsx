@@ -1,5 +1,5 @@
 import styles from './Navbar.module.scss'
-import { contact } from 'data/contact'
+import { contact } from '@/data/contact'
 
 export function Navbar() {
   return (

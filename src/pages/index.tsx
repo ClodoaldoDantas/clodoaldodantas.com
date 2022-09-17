@@ -6,6 +6,7 @@ import { Hero } from '@/components/Hero/Hero'
 import { Navbar } from '@/components/Navbar/Navbar'
 import { Qualifications } from '@/components/Qualifications/Qualifications'
 import { TechStack } from '@/components/TechStack/TechStack'
+import { WorkExperiences } from '@/components/WorkExperiences/WorkExperiences'
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <Navbar />
         <Qualifications />
         <TechStack />
+        <WorkExperiences />
       </Container>
     </>
   )

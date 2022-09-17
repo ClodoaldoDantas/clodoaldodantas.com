@@ -3,3 +3,9 @@
   padding-left: 2.5rem;
   list-style: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .list {
+    padding-left: 0;
+  }
+}

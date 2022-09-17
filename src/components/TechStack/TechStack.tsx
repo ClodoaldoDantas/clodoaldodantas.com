@@ -1,5 +1,5 @@
 import styles from './TechStack.module.scss'
-import { techStack } from 'data/tech-stack'
+import { techStack } from '@/data/tech-stack'
 
 export function TechStack() {
   return (

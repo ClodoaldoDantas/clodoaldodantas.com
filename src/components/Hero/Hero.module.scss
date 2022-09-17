@@ -1,4 +1,4 @@
-.heroContainer {
+.container {
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -11,7 +11,7 @@
   }
 }
 
-.userName {
+.name {
   font-size: 2.5rem;
   margin: 2rem 0;
 }
@@ -34,4 +34,18 @@
   display: inline-block;
   color: var(--mainTextColor);
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .name {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
 }
