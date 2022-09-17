@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from './Hero.module.scss'
-import { contact } from '@/data/contact'
 
 export function Hero() {
   return (
@@ -21,10 +20,6 @@ export function Hero() {
           buscando programar de maneira simples, organizada e com boas práticas
           de código ☕.
         </p>
-
-        <a href={`mailto:${contact.email}`} className={styles.email}>
-          👉 {contact.email}
-        </a>
       </div>
     </section>
   )

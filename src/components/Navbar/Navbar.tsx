@@ -1,7 +1,32 @@
-import styles from './Navbar.module.scss'
-import { contact } from '@/data/contact'
+import dynamic from 'next/dynamic'
+import { useEffect } from 'react'
 
-export function Navbar() {
+import { useLocalStorage } from '@/hooks/useLocalStorage'
+import { contact } from '@/data/contact'
+import styles from './Navbar.module.scss'
+
+type Theme = 'light' | 'dark'
+
+function Navbar() {
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  const [theme, setTheme] = useLocalStorage<Theme>(
+    '@clodoaldodantas:theme',
+    defaultDark ? 'dark' : 'light'
+  )
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+      document.documentElement.removeAttribute('data-theme')
+    }
+  }, [theme])
+
+  function handleChangeTheme() {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
   return (
     <section className="section-page">
       <nav className={styles.navbar}>
@@ -13,16 +38,20 @@ export function Navbar() {
           💬 Github
         </a>
 
-        <a href={contact.instagram} target="_blank" rel="noreferrer">
-          💬 Instagram
-        </a>
-
         <a href="/resume.pdf" target="_blank">
           📝 Currículo
         </a>
 
         <a href="#">📬 Fale comigo</a>
+
+        <button onClick={handleChangeTheme}>
+          {theme === 'light' ? '🌙 Tema Dark' : '🌞 Tema Light'}
+        </button>
       </nav>
     </section>
   )
 }
+
+export default dynamic(() => Promise.resolve(Navbar), {
+  ssr: false,
+})

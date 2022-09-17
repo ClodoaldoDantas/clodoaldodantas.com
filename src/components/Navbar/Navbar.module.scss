@@ -3,15 +3,21 @@
   justify-content: space-between;
   flex-wrap: wrap;
   column-gap: 1rem;
-}
 
-.navbar a {
-  font-weight: 300;
-  color: var(--secondaryTextColor);
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
+  button {
+    border: 0;
+    background-color: transparent;
+  }
 
-.navbar a:hover {
-  color: var(--mainLinkColor);
+  a,
+  button {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--mainLinkColor);
+    }
+  }
 }

@@ -6,7 +6,15 @@
   box-sizing: border-box;
 }
 
-:root {
+html {
+  --mainTextColor: #000;
+  --secondaryTextColor: rgb(51 51 51);
+  --mainLinkColor: #0da2b8;
+  --mainBorderColor: rgb(218, 218, 218);
+  --mainBgColor: rgb(249, 250, 251);
+}
+
+html[data-theme='dark'] {
   --mainTextColor: #fff;
   --secondaryTextColor: #adb0b1;
   --mainLinkColor: rgb(30, 190, 214);
@@ -36,6 +44,10 @@ a {
 
 li {
   line-height: 1.9rem;
+}
+
+button {
+  cursor: pointer;
 }
 
 .section-page {
