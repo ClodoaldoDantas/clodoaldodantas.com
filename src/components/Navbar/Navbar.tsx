@@ -3,7 +3,7 @@ import { contact } from 'data/contact'
 
 export function Navbar() {
   return (
-    <section>
+    <section className="section-page">
       <nav className={styles.navbar}>
         <a href={contact.linkedin} target="_blank" rel="noreferrer">
           💬 Linkedin
