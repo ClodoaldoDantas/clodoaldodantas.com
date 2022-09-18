@@ -8,6 +8,7 @@ import { Qualifications } from '@/components/Qualifications/Qualifications'
 import { TechStack } from '@/components/TechStack/TechStack'
 import { WorkExperiences } from '@/components/WorkExperiences/WorkExperiences'
 import { Education } from '@/components/Education/Education'
+import { Recommendations } from '@/components/Recommendations/Recommendations'
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         <TechStack />
         <WorkExperiences />
         <Education />
+        <Recommendations />
       </Container>
     </>
   )
