@@ -42,7 +42,9 @@ function Navbar() {
           📝 Currículo
         </a>
 
-        <a href="#">📬 Fale comigo</a>
+        <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer">
+          📬 E-mail
+        </a>
 
         <button onClick={handleChangeTheme}>
           {theme === 'light' ? '🌙 Tema Dark' : '🌞 Tema Light'}

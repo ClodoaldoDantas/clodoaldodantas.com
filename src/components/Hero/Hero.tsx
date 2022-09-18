@@ -1,7 +1,13 @@
+import { useKBar } from 'kbar'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import styles from './Hero.module.scss'
 
-export function Hero() {
+function Hero() {
+  const { query } = useKBar()
+  const isMac = /(Mac)/i.test(navigator.userAgent)
+  const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent)
+
   return (
     <section className={styles.container}>
       <Image
@@ -21,10 +27,24 @@ export function Hero() {
           de código ☕.
         </p>
 
-        {/* <button>
-          Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →
-        </button> */}
+        {isMobile ? (
+          <button onClick={query.toggle} className={styles.openKbarButton}>
+            Clique para começar →
+          </button>
+        ) : isMac ? (
+          <button onClick={query.toggle} className={styles.openKbarButton}>
+            Pressione <kbd>⌘</kbd> <kbd>K</kbd> para iniciar →
+          </button>
+        ) : (
+          <button onClick={query.toggle} className={styles.openKbarButton}>
+            Pressione <kbd>ctrl</kbd> <kbd>K</kbd> para iniciar →
+          </button>
+        )}
       </div>
     </section>
   )
 }
+
+export default dynamic(() => Promise.resolve(Hero), {
+  ssr: false,
+})

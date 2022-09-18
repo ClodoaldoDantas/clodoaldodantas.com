@@ -25,11 +25,11 @@ export const shortcutGridStyles = {
 }
 
 export const shortcutStyles = {
-  padding: '4px 8px',
-  border: '1px solid var(--kbarColor)',
+  padding: '4px 6px',
+  background: 'var(--kbarShortcutBg)',
   color: 'var(--kbarColor)',
   borderRadius: '4px',
   fontSize: 14,
   textTransform: 'uppercase' as React.CSSProperties['textTransform'],
-  fontFamily: 'IBM Plex Mono, monospace',
+  fontFamily: 'Anonymous Pro, monospace',
 }

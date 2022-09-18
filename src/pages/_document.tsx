@@ -15,7 +15,7 @@ export default function Document() {
         <meta name="author" content="Clodoaldo Dantas" />
 
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Readex+Pro:wght@300;400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Readex+Pro:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
       </Head>
