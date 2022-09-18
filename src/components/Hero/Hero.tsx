@@ -20,6 +20,10 @@ export function Hero() {
           buscando programar de maneira simples, organizada e com boas práticas
           de código ☕.
         </p>
+
+        {/* <button>
+          Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →
+        </button> */}
       </div>
     </section>
   )
