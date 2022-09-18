@@ -1,3 +1,4 @@
+import { contact } from '@/data/contact'
 import { useKBar } from 'kbar'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -22,9 +23,12 @@ function Hero() {
         <h1 className={styles.name}>Clodoaldo Dantas</h1>
 
         <p className={styles.bio}>
-          Desenvolvedor Front-end, atuando na <a href="#">TQI</a>, e sempre
-          buscando programar de maneira simples, organizada e com boas práticas
-          de código ☕.
+          Desenvolvedor Front-end, atuando na{' '}
+          <a href={contact.work} target="_blank" rel="noreferrer">
+            TQI
+          </a>
+          , e sempre buscando programar de maneira simples, organizada e com
+          boas práticas de código ☕.
         </p>
 
         {isMobile ? (

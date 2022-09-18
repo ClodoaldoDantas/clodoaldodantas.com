@@ -7,9 +7,10 @@ export function TechStack() {
       <h2 className="title">Tech stack</h2>
 
       <div className={styles.wrapper}>
-        {techStack.map((stack) => (
-          <div key={stack} className={styles.card}>
-            <span>{stack}</span>
+        {techStack.map(({ icon: Icon, content }) => (
+          <div key={content} className={styles.card}>
+            <Icon size={24} />
+            <span>{content}</span>
           </div>
         ))}
       </div>

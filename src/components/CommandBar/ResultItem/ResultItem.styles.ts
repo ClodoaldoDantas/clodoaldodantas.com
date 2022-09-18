@@ -30,6 +30,6 @@ export const shortcutStyles = {
   color: 'var(--kbarColor)',
   borderRadius: '4px',
   fontSize: 14,
+  fontFamily: 'JetBrains Mono, monospace',
   textTransform: 'uppercase' as React.CSSProperties['textTransform'],
-  fontFamily: 'Anonymous Pro, monospace',
 }
