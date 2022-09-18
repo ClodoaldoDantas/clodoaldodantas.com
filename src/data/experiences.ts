@@ -45,6 +45,6 @@ export const workExperiences: WorkExperience[] = [
     content: [
       'Responsável pelo front-end de um dashboard para uma empresa multinacional no ramo de produção de calçados, que tinha como objetivo exibir e filtrar todos os dados e métricas do cliente em diferentes gráficos e tabelas.',
     ],
-    skills: ['Vue.js'],
+    skills: ['React.js', 'Vue.js', 'MongoDB', 'Flutter', 'Node.js'],
   },
 ]
