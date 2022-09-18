@@ -23,10 +23,16 @@ html[data-theme='dark'] {
 }
 
 body {
-  font-family: 'Readex Pro', sans-serif;
   line-height: 1.5rem;
   background-color: var(--mainBgColor);
   color: var(--mainTextColor);
+}
+
+body,
+button,
+input {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1rem;
 }
 
 p,
