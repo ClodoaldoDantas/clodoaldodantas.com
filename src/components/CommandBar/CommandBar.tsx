@@ -57,7 +57,7 @@ export function CommandBar({ children }: CommandBarProps) {
       shortcut: ['s'],
       keywords: 'view-source',
       section: 'Geral',
-      perform: () => openLink(contact.github),
+      perform: () => openLink(`${contact.github}/clodoaldodantas.com`),
       icon: <FiCode size={24} />,
     },
     {
