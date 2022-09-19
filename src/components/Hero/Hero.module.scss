@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  & > span {
+    flex-shrink: 0;
+  }
+}
+
+.name {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.bio {
+  margin: 1rem 0;
+}
+
+.profile {
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.email {
+  display: inline-block;
+  color: var(--mainTextColor);
+  margin-bottom: 1rem;
+}
+
+.openKbarButton {
+  border: 0;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--mainBorderColor);
+  }
+
+  kbd {
+    font-family: 'JetBrains Mono', monospace;
+    padding: 4px 6px;
+    background: var(--mainTextColor);
+    color: var(--mainBgColor);
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .name {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}

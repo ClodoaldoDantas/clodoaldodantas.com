@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  button {
+    border: 0;
+    background-color: transparent;
+  }
+
+  a,
+  button {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--mainLinkColor);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+
+    button {
+      order: -1;
+    }
+  }
+}

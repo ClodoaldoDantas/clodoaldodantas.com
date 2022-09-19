@@ -1,0 +1,48 @@
+.card {
+  border-left: 1px solid var(--mainBorderColor);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+
+  & > strong {
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li:not(:last-child)::after {
+    content: '|';
+    margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .skills {
+    align-items: flex-start;
+    flex-direction: column;
+
+    li:first-child::before {
+      content: '-';
+      margin-right: 0.5rem;
+    }
+  }
+}

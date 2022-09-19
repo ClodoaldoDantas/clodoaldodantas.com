@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* light theme */
+  --mainTextColor: #000;
+  --secondaryTextColor: rgb(51 51 51);
+  --mainLinkColor: #0da2b8;
+  --mainBorderColor: rgb(218, 218, 218);
+  --mainBgColor: rgb(249, 250, 251);
+
+  /* kbar theme */
+  --kbarOverlay: rgba(0, 0, 0, 0.6);
+  --kbarBg: rgb(249, 250, 251);
+  --kbarColor: #000;
+  --kbarName: rgb(51 51 51);
+  --kbarHover: #efefef;
+  --kbarShortcutBg: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] {
+  /* dark theme */
+  --mainTextColor: #fff;
+  --secondaryTextColor: #adb0b1;
+  --mainLinkColor: rgb(30, 190, 214);
+  --mainBorderColor: #2b3031;
+  --mainBgColor: #131415;
+}
+
+body {
+  line-height: 1.5rem;
+  background-color: var(--mainBgColor);
+}
+
+body,
+button,
+input {
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 1rem;
+  color: var(--mainTextColor);
+}
+
+p,
+span,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+}
+
+li {
+  line-height: 1.9rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section-page {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* UTILS */
+.title {
+  margin: 1.25rem 0;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}

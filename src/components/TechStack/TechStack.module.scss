@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

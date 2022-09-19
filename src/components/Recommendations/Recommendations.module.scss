@@ -1,0 +1,28 @@
+.recommendation {
+  margin-bottom: 1.5rem;
+
+  &:not(:last-child) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--mainBorderColor);
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    border-radius: 50%;
+  }
+
+  a {
+    color: var(--mainTextColor);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--mainLinkColor);
+    }
+  }
+}

@@ -1,8 +1,15 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.scss'
+import { AppProps } from 'next/app'
+import { CommandBar } from '@/components/CommandBar/CommandBar'
+import { Toaster } from 'react-hot-toast'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <CommandBar>
+      <Component {...pageProps} />
+      <Toaster />
+    </CommandBar>
+  )
 }
 
 export default MyApp
