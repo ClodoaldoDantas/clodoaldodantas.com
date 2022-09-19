@@ -16,4 +16,13 @@
   img {
     border-radius: 50%;
   }
+
+  a {
+    color: var(--mainTextColor);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--mainLinkColor);
+    }
+  }
 }

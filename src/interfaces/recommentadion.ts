@@ -1,6 +1,9 @@
 export interface Recommendation {
-  image: string
-  author: string
-  role: string
   text: string
+  author: {
+    image: string
+    name: string
+    linkedin: string
+    role: string
+  }
 }
