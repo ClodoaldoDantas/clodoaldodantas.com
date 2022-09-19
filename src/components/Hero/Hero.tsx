@@ -23,12 +23,9 @@ function Hero() {
         <h1 className={styles.name}>Clodoaldo Dantas</h1>
 
         <p className={styles.bio}>
-          Desenvolvedor Front-end, atuando na{' '}
-          <a href={contact.work} target="_blank" rel="noreferrer">
-            TQI
-          </a>
-          , e sempre buscando programar de maneira simples, organizada e com
-          boas práticas de código ☕.
+          Desenvolvedor Front-end, formado em Análise e Desenvolvimento de
+          Sistemas, e sempre buscando programar de maneira simples, organizada e
+          com boas práticas de código ☕.
         </p>
 
         {isMobile ? (
