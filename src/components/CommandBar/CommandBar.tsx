@@ -1,4 +1,6 @@
 import { ReactNode } from 'react'
+import toast from 'react-hot-toast'
+
 import {
   KBarAnimator,
   KBarPortal,
@@ -19,12 +21,14 @@ import {
 } from 'react-icons/fi'
 
 import { ResultItem } from './ResultItem/ResultItem'
+
 import {
   positionerStyle,
   animatorStyle,
   searchStyle,
   groupNameStyle,
 } from './CommandBar.styles'
+
 import { contact } from '@/data/contact'
 
 interface CommandBarProps {
@@ -34,7 +38,11 @@ interface CommandBarProps {
 export function CommandBar({ children }: CommandBarProps) {
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href)
-    console.log('link copiado')
+
+    toast.success(
+      'Copiado! \n Agora você pode compartilhá-lo com qualquer pessoa.',
+      { position: 'bottom-right' }
+    )
   }
 
   const openLink = (url: string) => {
