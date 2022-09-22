@@ -1,31 +1,11 @@
 import dynamic from 'next/dynamic'
-import { useEffect } from 'react'
-
-import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { contact } from '@/data/contact'
+import { useTheme } from '@/hooks/useTheme'
+
 import styles from './Navbar.module.scss'
 
-type Theme = 'light' | 'dark'
-
 function Navbar() {
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-  const [theme, setTheme] = useLocalStorage<Theme>(
-    '@clodoaldodantas:theme',
-    defaultDark ? 'dark' : 'light'
-  )
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark')
-    } else {
-      document.documentElement.removeAttribute('data-theme')
-    }
-  }, [theme])
-
-  function handleChangeTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  const { theme, changeTheme } = useTheme()
 
   return (
     <section className="section-page">
@@ -46,9 +26,11 @@ function Navbar() {
           📬 E-mail
         </a>
 
-        <button onClick={handleChangeTheme}>
-          {theme === 'light' ? '🌙 Tema Dark' : '🌞 Tema Light'}
-        </button>
+        {theme === 'light' ? (
+          <button onClick={changeTheme}>🌙 Tema Dark</button>
+        ) : (
+          <button onClick={changeTheme}>🌞 Tema Light</button>
+        )}
       </nav>
     </section>
   )
