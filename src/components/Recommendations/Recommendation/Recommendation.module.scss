@@ -1,4 +1,5 @@
 .recommendation {
+  cursor: grab;
   margin-bottom: 1.5rem;
 
   &:not(:last-child) {
@@ -23,6 +24,7 @@
 
     &:hover {
       color: var(--mainLinkColor);
+      text-decoration: underline;
     }
   }
 }

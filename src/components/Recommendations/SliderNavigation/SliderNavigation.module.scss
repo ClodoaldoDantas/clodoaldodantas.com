@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 0;
+
+  h2 {
+    color: var(--mainTextColor);
+  }
+
+  @media only screen and (max-width: 320px) {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--mainTextColor);
+    color: var(--mainBgColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
