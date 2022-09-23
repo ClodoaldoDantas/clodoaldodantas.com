@@ -1,37 +1,24 @@
-import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+
+import { Recommendation } from './Recommendation/Recommendation'
 import { recommendations } from '@/data/recommendations'
-import styles from './Recommendations.module.scss'
+import { SliderNavigation } from './SliderNavigation/SliderNavigation'
 
 export function Recommendations() {
   return (
     <section className="section-page">
-      <h2 className="title">Recomendações</h2>
+      <Swiper loop slidesPerView={1}>
+        <span slot="container-start">
+          <SliderNavigation />
+        </span>
 
-      {recommendations.map((recommendation) => (
-        <div className={styles.recommendation} key={recommendation.author.name}>
-          <div className={styles.author}>
-            <Image
-              src={recommendation.author.image}
-              alt={`Foto de ${recommendation.author.name}`}
-              height={60}
-              width={60}
-            />
-
-            <div>
-              <a
-                href={recommendation.author.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {recommendation.author.name}
-              </a>
-              <p>{recommendation.author.role}</p>
-            </div>
-          </div>
-
-          <blockquote>{recommendation.text}</blockquote>
-        </div>
-      ))}
+        {recommendations.map((recommendation) => (
+          <SwiperSlide key={recommendation.author.name}>
+            <Recommendation data={recommendation} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   )
 }

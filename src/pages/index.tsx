@@ -4,6 +4,7 @@ import { NextPage } from 'next'
 import { Container } from '@/components/Container/Container'
 import Navbar from '@/components/Navbar/Navbar'
 import Hero from '@/components/Hero/Hero'
+
 import { Qualifications } from '@/components/Qualifications/Qualifications'
 import { TechStack } from '@/components/TechStack/TechStack'
 import { WorkExperiences } from '@/components/WorkExperiences/WorkExperiences'
