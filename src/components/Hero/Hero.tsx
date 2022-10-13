@@ -13,7 +13,7 @@ function Hero() {
     <section className={styles.container}>
       <Image
         className={styles.profile}
-        src="/profile.jpeg"
+        src="https://github.com/clodoaldodantas.png"
         alt="Foto do autor do site"
         width={150}
         height={150}
