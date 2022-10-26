@@ -1,7 +1,12 @@
 export interface WorkExperience {
-  role: string
-  company: string
+  title: string
   period: string
-  content: string[]
-  skills: string[]
+  content?: string[]
+  skills?: string[]
+  timeline?: Array<{
+    title: string
+    period: string
+    content: string[]
+    skills: string[]
+  }>
 }

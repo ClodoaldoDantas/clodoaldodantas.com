@@ -1,15 +1,13 @@
 .card {
-  border-left: 1px solid var(--mainBorderColor);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-left: 2rem;
+  margin-bottom: 1.5rem;
 
-  & > strong {
-    text-transform: uppercase;
+  &:not(:last-child) {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--mainBorderColor);
   }
 
   p {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -28,21 +26,55 @@
     content: '|';
     margin: 0 0.5rem;
   }
-}
 
-@media only screen and (max-width: 600px) {
-  .card {
-    border-left: none;
-    padding-left: 0;
-  }
-
-  .skills {
+  @media only screen and (max-width: 600px) {
     align-items: flex-start;
     flex-direction: column;
 
     li:first-child::before {
       content: '-';
       margin-right: 0.5rem;
+    }
+  }
+}
+
+.timeline {
+  border-left: 2px solid var(--mainBorderColor);
+
+  @media only screen and (max-width: 375px) {
+    border-left: 0;
+  }
+}
+
+.timelineRow {
+  margin: 0 0 1.25rem 1.25rem;
+  padding: 0.625rem;
+
+  @media only screen and (max-width: 375px) {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+.timelineContent > strong {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -39px;
+    margin-top: 1.5px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background: var(--mainBgColor);
+    border: 3px solid var(--mainBorderColor);
+
+    @media only screen and (max-width: 375px) {
+      display: none;
     }
   }
 }

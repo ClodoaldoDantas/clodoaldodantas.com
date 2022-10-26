@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 
 import { Container } from '@/components/Container/Container'
-import { Navbar } from '@/components/Navbar/Navbar'
+import { Footer } from '@/components/Footer/Footer'
 import Hero from '@/components/Hero/Hero'
 
 import { Qualifications } from '@/components/Qualifications/Qualifications'
@@ -20,12 +20,12 @@ const Home: NextPage = () => {
 
       <Container>
         <Hero />
-        <Navbar />
         <Qualifications />
         <TechStack />
         <WorkExperiences />
         <Education />
         <Recommendations />
+        <Footer />
       </Container>
     </>
   )
