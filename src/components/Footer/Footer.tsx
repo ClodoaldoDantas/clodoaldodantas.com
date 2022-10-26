@@ -1,9 +1,9 @@
 import { contact } from '@/data/contact'
-import styles from './Navbar.module.scss'
+import styles from './Footer.module.scss'
 
-export function Navbar() {
+export function Footer() {
   return (
-    <section className="section-page">
+    <footer className={styles.footer}>
       <nav className={styles.navbar}>
         <a href={contact.linkedin} target="_blank" rel="noreferrer">
           💬 Linkedin
@@ -21,6 +21,6 @@ export function Navbar() {
           📬 E-mail
         </a>
       </nav>
-    </section>
+    </footer>
   )
 }
