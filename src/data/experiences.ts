@@ -18,7 +18,7 @@ export const workExperiences: WorkExperience[] = [
       'Responsável pelo desenvolvimento de uma aplicativo de controle de estoque para uma empresa multinacional no ramo de produção de calçados. Também participei de algumas integrações junto com a equipe de backend do projeto.',
       'Responsável pelo front-end de uma ferramenta de monitoramento de tarefas.',
     ],
-    skills: ['React.js', 'React Native', 'TypeScript', 'Node.js', 'Express.js'],
+    skills: ['React.js', 'React Native', 'TypeScript'],
   },
   {
     role: 'Desenvolvedor Front-end Trainee',
