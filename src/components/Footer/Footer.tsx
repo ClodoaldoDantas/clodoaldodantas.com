@@ -1,3 +1,4 @@
+import { FiLinkedin, FiGithub, FiMail, FiFileText } from 'react-icons/fi'
 import { contact } from '@/data/contact'
 import styles from './Footer.module.scss'
 
@@ -6,19 +7,19 @@ export function Footer() {
     <footer className={styles.footer}>
       <nav className={styles.navbar}>
         <a href={contact.linkedin} target="_blank" rel="noreferrer">
-          💬 Linkedin
+          <FiLinkedin size={20} /> Linkedin
         </a>
 
         <a href={contact.github} target="_blank" rel="noreferrer">
-          💬 Github
+          <FiGithub size={20} /> Github
         </a>
 
         <a href="/resume.pdf" target="_blank">
-          📝 Currículo
+          <FiFileText size={20} /> Currículo
         </a>
 
         <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer">
-          📬 E-mail
+          <FiMail size={20} /> E-mail
         </a>
       </nav>
     </footer>

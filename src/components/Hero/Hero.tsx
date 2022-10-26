@@ -15,8 +15,8 @@ function Hero() {
         className={styles.profile}
         src="https://github.com/clodoaldodantas.png"
         alt="Foto do autor do site"
-        width={150}
-        height={150}
+        width={140}
+        height={140}
       />
 
       <div>
