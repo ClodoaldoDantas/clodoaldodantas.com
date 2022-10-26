@@ -7,12 +7,12 @@
 }
 
 html {
-  /* light theme */
-  --mainTextColor: #000;
-  --secondaryTextColor: rgb(51 51 51);
-  --mainLinkColor: #0da2b8;
-  --mainBorderColor: rgb(218, 218, 218);
-  --mainBgColor: rgb(249, 250, 251);
+  /* app theme */
+  --mainTextColor: #fff;
+  --secondaryTextColor: #adb0b1;
+  --mainLinkColor: rgb(30, 190, 214);
+  --mainBorderColor: #2b3031;
+  --mainBgColor: #131415;
 
   /* kbar theme */
   --kbarOverlay: rgba(0, 0, 0, 0.6);
@@ -21,15 +21,6 @@ html {
   --kbarName: rgb(51 51 51);
   --kbarHover: #efefef;
   --kbarShortcutBg: rgba(0, 0, 0, 0.1);
-}
-
-html[data-theme='dark'] {
-  /* dark theme */
-  --mainTextColor: #fff;
-  --secondaryTextColor: #adb0b1;
-  --mainLinkColor: rgb(30, 190, 214);
-  --mainBorderColor: #2b3031;
-  --mainBgColor: #131415;
 }
 
 body {

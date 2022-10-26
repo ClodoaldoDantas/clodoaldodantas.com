@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 
 import { Container } from '@/components/Container/Container'
-import Navbar from '@/components/Navbar/Navbar'
+import { Navbar } from '@/components/Navbar/Navbar'
 import Hero from '@/components/Hero/Hero'
 
 import { Qualifications } from '@/components/Qualifications/Qualifications'

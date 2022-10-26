@@ -1,12 +1,7 @@
-import dynamic from 'next/dynamic'
 import { contact } from '@/data/contact'
-import { useTheme } from '@/hooks/useTheme'
-
 import styles from './Navbar.module.scss'
 
-function Navbar() {
-  const { theme, changeTheme } = useTheme()
-
+export function Navbar() {
   return (
     <section className="section-page">
       <nav className={styles.navbar}>
@@ -25,17 +20,7 @@ function Navbar() {
         <a href={`mailto:${contact.email}`} target="_blank" rel="noreferrer">
           📬 E-mail
         </a>
-
-        {theme === 'light' ? (
-          <button onClick={changeTheme}>🌙 Tema Dark</button>
-        ) : (
-          <button onClick={changeTheme}>🌞 Tema Light</button>
-        )}
       </nav>
     </section>
   )
 }
-
-export default dynamic(() => Promise.resolve(Navbar), {
-  ssr: false,
-})
