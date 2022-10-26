@@ -53,7 +53,7 @@ export function CommandBar({ children }: CommandBarProps) {
     {
       id: 'copy',
       name: 'Copiar Link',
-      shortcut: ['l'],
+      shortcut: ['c', 'l'],
       keywords: 'copy-link',
       section: 'Geral',
       perform: copyLink,
@@ -62,7 +62,7 @@ export function CommandBar({ children }: CommandBarProps) {
     {
       id: 'source',
       name: 'Ver o código fonte',
-      shortcut: ['s'],
+      shortcut: ['v', 's'],
       keywords: 'view-source',
       section: 'Geral',
       perform: () => openLink(`${contact.github}/clodoaldodantas.com`),
@@ -71,7 +71,7 @@ export function CommandBar({ children }: CommandBarProps) {
     {
       id: 'email',
       name: 'Enviar E-mail',
-      shortcut: ['e'],
+      shortcut: ['s', 'e'],
       keywords: 'send-email',
       section: 'Geral',
       perform: () => openLink(`mailto:${contact.email}`),
@@ -80,7 +80,7 @@ export function CommandBar({ children }: CommandBarProps) {
     {
       id: 'resume',
       name: 'Baixar Currículo',
-      shortcut: ['r'],
+      shortcut: ['d', 'r'],
       keywords: 'download-resume',
       section: 'Geral',
       perform: () => openLink('/resume.pdf'),
