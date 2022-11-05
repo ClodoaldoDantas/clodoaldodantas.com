@@ -5,5 +5,5 @@ export const techStack = [
   { icon: RiReactjsLine, content: 'React, Next JS' },
   { icon: FaVuejs, content: 'Vue, Nuxt JS' },
   { icon: RiReactjsLine, content: 'React Native, Expo' },
-  { icon: FaNodeJs, content: 'Node JS, Express, Nest JS' },
+  { icon: FaNodeJs, content: 'Node JS, Express' },
 ]
