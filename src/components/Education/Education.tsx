@@ -9,7 +9,7 @@ export function Education() {
       <div className={styles.courses}>
         {courses.map((course) => (
           <div className={styles.course} key={course.name}>
-            <strong>🎓 {course.institution}</strong>
+            <strong>{course.institution}</strong>
             <p>{course.name}</p>
             <p>{course.period}</p>
           </div>

@@ -48,7 +48,7 @@ export function WorkExperiences() {
       {workExperiences.map((experience) => (
         <div key={experience.period} className={styles.card}>
           <ExperienceHeader
-            title={`💼 ${experience.title}`}
+            title={experience.title}
             period={experience.period}
           />
           <ExperienceContent content={experience.content} />
