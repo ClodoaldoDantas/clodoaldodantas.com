@@ -4,7 +4,7 @@ import { techStack } from '@/data/tech-stack'
 export function TechStack() {
   return (
     <section className="section-page">
-      <h2 className="title">Tech stack</h2>
+      <h2 className="title">Tecnologias</h2>
 
       <div className={styles.wrapper}>
         {techStack.map(({ icon: Icon, content }) => (

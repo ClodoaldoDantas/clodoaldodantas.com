@@ -1,14 +1,19 @@
 .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.9rem;
+
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
   border: 1px solid var(--mainBorderColor);
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 
   display: flex;
   align-items: center;
